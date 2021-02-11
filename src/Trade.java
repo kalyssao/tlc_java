@@ -11,6 +11,14 @@ public class Trade {
         this.time = LocalTime.ofNanoOfDay(newTimestamp * 1000000);
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public LocalTime getTime() {
+        return time;
+    }
+
     @Override
     public String toString() {
         return "Trade{" +
