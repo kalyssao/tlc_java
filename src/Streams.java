@@ -58,6 +58,10 @@ public class Streams {
 
     }
 
+    public static void findGivenSymbol() {
+
+    }
+
     public static void main(String[] args) throws IOException {
         File file = new File("C:\\Users\\TURNTABL\\IdeaProjects\\JavaLabs\\src\\Trades.txt");
 
