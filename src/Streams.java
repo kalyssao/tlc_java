@@ -51,6 +51,7 @@ public class Streams {
                 // sort by time stamp and quantity
                 .sorted(comparing(Trade::getTime))
                 .sorted(comparing(Trade::getQuantity))
+                .filter(t -> t.getQuantity() > 200)
                 .collect(Collectors.toList());
 
         System.out.println(trades);
