@@ -9,6 +9,8 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.Comparator.comparing;
+
 public class Streams {
     public static void printLine(){
         File file = new File("C:\\Users\\TURNTABL\\IdeaProjects\\JavaLabs\\src\\Trades.txt");
@@ -46,6 +48,9 @@ public class Streams {
         List<Trade> trades = Files
                 .lines(file.toPath())
                 .map(mapLineToTrade)
+                // sort by time stamp and quantity
+                .sorted(comparing(Trade::getTime))
+                .sorted(comparing(Trade::getQuantity))
                 .collect(Collectors.toList());
 
         System.out.println(trades);
